@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router';
-import SignIn from './components/sign_in/sign_in.component';
+import Authentication from './components/authentication/authentication.component';
 import Home from './pages/home/home.component';
 import Navigation from './pages/navigation/navigation.component';
 
@@ -14,7 +14,7 @@ const App = () => {
 				{/* 'index' short for index = {true}. Means that you render that component if route matches parent route*/}
 				<Route index element={<Home />} />
 				<Route path='/shop' element={<Shop />} />
-				<Route path='/sign-in' element={<SignIn />} />
+				<Route path='/auth' element={<Authentication />} />
 			</Route>
 		</Routes>
 	);

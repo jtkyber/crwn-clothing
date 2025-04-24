@@ -1,0 +1,14 @@
+.sign_in_container {
+    display: flex;
+    flex-flow: column wrap;
+    width: 380px;
+
+    h2 {
+        margin: 10px 0;
+    }
+
+    .buttons_container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
