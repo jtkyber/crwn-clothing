@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import {
-	createAuthUserWithEmailAndPassword,
 	createUserDocumentFromAuth,
 	signInAuthUserWithEmailAndPassword,
 	singInWithGooglePopup,
@@ -23,8 +22,7 @@ const SignInForm = () => {
 	};
 
 	const signInWithGoogle = async () => {
-		const { user } = await singInWithGooglePopup();
-		await createUserDocumentFromAuth(user);
+		await singInWithGooglePopup();
 	};
 
 	const handleChange = e => {
@@ -36,8 +34,7 @@ const SignInForm = () => {
 		e.preventDefault();
 
 		try {
-			const response = await signInAuthUserWithEmailAndPassword(email, password);
-			console.log(response);
+			const { user } = await signInAuthUserWithEmailAndPassword(email, password);
 			resetForm();
 		} catch (err) {
 			if (err.code === 'auth/invalid-credential') {
