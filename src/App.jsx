@@ -11,9 +11,9 @@ const App = () => {
 			<Route path='/' element={<Navigation />}>
 				{/* 'index' short for index = {true}. Means that you render that component if route matches parent route*/}
 				<Route index element={<Home />} />
-				<Route path='/shop' element={<Shop />} />
-				<Route path='/auth' element={<Authentication />} />
-				<Route path='/checkout' element={<Checkout />} />
+				<Route path='shop/*' element={<Shop />} />
+				<Route path='auth' element={<Authentication />} />
+				<Route path='checkout' element={<Checkout />} />
 			</Route>
 		</Routes>
 	);

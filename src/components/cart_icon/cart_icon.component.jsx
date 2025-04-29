@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import shoppingIcon from '../../assets/shopping-bag.svg';
-import { CartContext } from '../contexts/cart.context';
+import { CartContext } from '../../contexts/contexts';
 import styles from './cart_icon.module.scss';
 
 const CartIcon = () => {
